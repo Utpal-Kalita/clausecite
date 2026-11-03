@@ -165,6 +165,8 @@
     L.push("Honesty note: ClauseCite runs fixed patterns only. A flag means wording worth reading,");
     L.push("not a legal conclusion. Missing flags do not prove a clause is absent. UNCLEAR means");
     L.push("negation or reversed wording nearby may flip the meaning - read those clauses yourself.");
+    L.push("The negation check knows common phrasings it was tested on; it can miss negations in");
+    L.push("other words, so treat any single flag as a pointer to read, not a settled finding.");
     return L.join("\n");
   }
 
