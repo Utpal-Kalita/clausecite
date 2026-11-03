@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClauseCite - see exactly what your terms say</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <h1>ClauseCite</h1>
+    <p class="tag">Paste any terms, contract, or policy. ClauseCite runs a fixed set of
+    published patterns and shows you <em>the exact words</em> each one matched - no AI
+    summary, no score, nothing uploaded. Same text, same report, every time.</p>
+  </header>
+
+  <section class="input-area">
+    <textarea id="src" rows="12" spellcheck="false"
+      placeholder="Paste the full text here. Nothing leaves this page - the scan runs entirely in your browser."></textarea>
+    <div class="row">
+      <button id="go">Analyze</button>
+      <button id="sample" class="ghost">Load a sample</button>
+      <button id="clear" class="ghost">Clear</button>
+    </div>
+  </section>
+
+  <section id="results" hidden>
+    <div class="summary" id="summary"></div>
+    <div class="row"><button id="copy" class="ghost">Copy full report</button></div>
+    <div id="cats"></div>
+    <section class="notfound">
+      <h2>No matching wording found</h2>
+      <p class="muted">These patterns did not fire. That only means this text does not use
+      the phrasing ClauseCite knows - a clause can still exist in different words.</p>
+      <ul id="notfound"></ul>
+    </section>
+  </section>
+
+  <footer>
+    <p><strong>Honest limits.</strong> ClauseCite is a deterministic pattern scanner, not a
+    lawyer and not legal advice. A flag means "wording worth reading", not a legal
+    conclusion. It catches only the phrasings its rules know, so read the original text
+    before deciding anything. The full rule set ships in <code>rules.js</code> in the
+    repository - every flag can be traced to a published pattern and the exact span it matched.</p>
+  </footer>
+</main>
+<script src="rules.js"></script>
+<script src="analyzer.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
