@@ -10,7 +10,8 @@ category, with why it matters and what to check next.
   heading, and the full rule set ships in `rules.js`.
 - **Negation-aware.** Wording like 'we do not sell your data' or 'we indemnify you' is
   marked UNCLEAR with a neutral note instead of a confident risk - no directional
-  assertion is made when the sentence may mean the opposite.
+  assertion is made when the sentence may mean the opposite. The guards are tested on
+  common phrasings only; they are not a universal guarantee for arbitrary legal language.
 - **Honest limits.** A flag means "wording worth reading", never a legal conclusion.
   Deterministic patterns catch only the phrasings they know; a missing flag never proves
   a clause is absent. Not legal advice.
